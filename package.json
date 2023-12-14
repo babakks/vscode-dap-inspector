@@ -1,8 +1,8 @@
 {
     "name": "vscode-dap-inspector",
-    "displayName": "DAP inspector",
+    "displayName": "DAP Inspector",
     "description": "A basic VS Code extension to play with Debug Adapter Protocol (DAP)",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "babakks",
     "repository": {
         "type": "git",
