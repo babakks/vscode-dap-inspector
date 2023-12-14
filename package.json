@@ -1,0 +1,58 @@
+{
+    "name": "vscode-dap-inspector",
+    "displayName": "DAP inspector",
+    "description": "A basic VS Code extension to play with Debug Adapter Protocol (DAP)",
+    "version": "0.0.1",
+    "publisher": "babakks",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/babakks/vscode-dap-inspector"
+    },
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Other",
+        "Debuggers"
+    ],
+    "keywords": [
+        "dap",
+        "debug",
+        "adapter",
+        "protocol",
+        "request"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "icon": "image/icon.png",
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vscode-dap-inspector.sendDAPRequest",
+                "title": "DAP Inspector: Send DAP Request",
+                "shortTitle": "Send DAP Request"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "@types/vscode": "^1.70.0",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "@vscode/test-cli": "^0.0.4",
+        "@vscode/test-electron": "^2.3.8",
+        "eslint": "^8.54.0",
+        "typescript": "^5.3.2"
+    }
+}
